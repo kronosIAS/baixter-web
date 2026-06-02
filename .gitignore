@@ -1,0 +1,15 @@
+# Artefactos del acompañante visual de brainstorming
+.superpowers/
+
+# Capturas y logs de Playwright MCP
+.playwright-mcp/
+
+# PDFs generados
+*.pdf
+
+# Configuración local del asistente (se mantiene fuera del control de versiones)
+.claude/settings.local.json
+
+# Sistema operativo / editor
+Thumbs.db
+.DS_Store
