@@ -1746,5 +1746,9 @@ a { text-decoration: none; color: inherit; }
   .sticker--3 { right: 8px; left: auto; top: 50%; }
   .panel-content { padding: 40px 18px; }
   .panel-bar { gap: 10px; padding: 10px 16px; }
-  .back-btn span { display: none; }
+  /* Botó només-icona, però el text segueix sent el nom accessible (lectors de pantalla) */
+  .back-btn span {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
 }
