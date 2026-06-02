@@ -7,7 +7,17 @@ const i18nData = window.i18nData = {
     'nav.howItWorks': 'Com funciona',
     'nav.customerService': 'Atenció al client',
     'nav.contact': 'Contacte',
+    'nav.clients': 'A qui servim',
     'nav.requestFree': 'Sol·licitar gratis',
+
+    'machine.sub': 'Serveis de Vending',
+    'machine.displayEyebrow': 'Selecciona',
+    'machine.displayIdle': 'una secció',
+    'machine.dispensing': 'Dispensant…',
+    'machine.back': 'Tornar a la màquina',
+    'machine.sticker1': '0€ instal·lació',
+    'machine.sticker2': '0€ manteniment',
+    'machine.sticker3': '24/7',
 
     'hero.badge': 'Servei 100% gratuït per a la teva empresa',
     'hero.title': 'Màquines de vending<br /><span class="gradient-text">sense cost per a tu</span>',
@@ -164,7 +174,17 @@ const i18nData = window.i18nData = {
     'nav.howItWorks': 'Cómo funciona',
     'nav.customerService': 'Atención al cliente',
     'nav.contact': 'Contacto',
+    'nav.clients': 'A quién servimos',
     'nav.requestFree': 'Solicitar gratis',
+
+    'machine.sub': 'Servicios de Vending',
+    'machine.displayEyebrow': 'Selecciona',
+    'machine.displayIdle': 'una sección',
+    'machine.dispensing': 'Dispensando…',
+    'machine.back': 'Volver a la máquina',
+    'machine.sticker1': '0€ instalación',
+    'machine.sticker2': '0€ mantenimiento',
+    'machine.sticker3': '24/7',
 
     'hero.badge': 'Servicio 100% gratuito para tu empresa',
     'hero.title': 'Máquinas de vending<br /><span class="gradient-text">sin coste para ti</span>',
@@ -319,27 +339,38 @@ const i18nData = window.i18nData = {
 // ── i18n ENGINE ──
 window.currentLang = 'ca';
 
+// Aplica data-i18n / data-i18n-html / data-i18n-placeholder a UN sol element.
+// Usa l'idioma indicat o l'actual. Reutilitzat per applyTranslations (DRY) i
+// pel router (display de la màquina) via window.applyI18nElement.
+function applyI18nElement(el, lang) {
+  if (!el) return;
+  lang = lang || window.currentLang || 'ca';
+  const dict = i18nData[lang];
+  if (!dict) return;
+
+  if (el.dataset.i18n !== undefined) {
+    const v = dict[el.dataset.i18n];
+    if (v !== undefined) el.textContent = v;
+  }
+  if (el.dataset.i18nHtml !== undefined) {
+    const v = dict[el.dataset.i18nHtml];
+    if (v !== undefined) el.innerHTML = v;
+  }
+  if (el.dataset.i18nPlaceholder !== undefined) {
+    const v = dict[el.dataset.i18nPlaceholder];
+    if (v !== undefined) el.placeholder = v;
+  }
+}
+window.applyI18nElement = applyI18nElement;
+
 function applyTranslations(lang) {
   if (!i18nData[lang]) return;
   window.currentLang = lang;
   document.documentElement.lang = lang;
 
-  // Text content
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.dataset.i18n;
-    if (i18nData[lang][key] !== undefined) el.textContent = i18nData[lang][key];
-  });
-
-  // HTML content (elements with inner tags like <strong>, <br>, <a>)
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.dataset.i18nHtml;
-    if (i18nData[lang][key] !== undefined) el.innerHTML = i18nData[lang][key];
-  });
-
-  // Placeholders
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    const key = el.dataset.i18nPlaceholder;
-    if (i18nData[lang][key] !== undefined) el.placeholder = i18nData[lang][key];
+  // Aplica a tot el document (home-màquina + tots els paneles), per element
+  document.querySelectorAll('[data-i18n], [data-i18n-html], [data-i18n-placeholder]').forEach(el => {
+    applyI18nElement(el, lang);
   });
 
   // Active button state
