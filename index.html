@@ -3,15 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; img-src 'self' data: https://images.unsplash.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Vending Baix Ter – Màquines de Vending Gratuïtes</title>
   <meta name="description" content="Vending Baix Ter instal·la màquines de vending de menjar, cafè i begudes a la teva empresa sense cap cost. Servei complet i gratuït al Baix Ter i rodalies." />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://www.vendingbaixter.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A2240" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ca_ES" />
+  <meta property="og:site_name" content="Vending Baix Ter" />
+  <meta property="og:title" content="Vending Baix Ter – Màquines de Vending Gratuïtes" />
+  <meta property="og:description" content="Vending Baix Ter instal·la màquines de vending de menjar, cafè i begudes a la teva empresa sense cap cost. Servei complet i gratuït al Baix Ter i rodalies." />
+  <meta property="og:url" content="https://www.vendingbaixter.com/" />
+  <meta property="og:image" content="https://www.vendingbaixter.com/assets/images/banner-baixter.jpg" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vending Baix Ter – Màquines de Vending Gratuïtes" />
+  <meta name="twitter:description" content="Vending Baix Ter instal·la màquines de vending de menjar, cafè i begudes a la teva empresa sense cap cost. Servei complet i gratuït al Baix Ter i rodalies." />
+  <meta name="twitter:image" content="https://www.vendingbaixter.com/assets/images/banner-baixter.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/images/logo-baixter.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Vending Baix Ter","image":"https://www.vendingbaixter.com/assets/images/logo-baixter.jpg","url":"https://www.vendingbaixter.com/","telephone":"+34605913964","email":"info@vendingbaixter.com","priceRange":"Gratuit","areaServed":"Baix Ter, Girona","description":"Instal·lacio i manteniment gratuits de maquines de vending de cafe, snacks i begudes per a empreses del Baix Ter i comarques veines.","address":{"@type":"PostalAddress","addressRegion":"Girona","addressCountry":"ES"}}
+  </script>
 </head>
 <body>
+<a class="skip-link" href="#app" data-i18n="a11y.skip">Salta al contingut</a>
 <main id="app">
 
   <!-- ════════ HOME · MÀQUINA ════════ -->
@@ -31,12 +63,13 @@
         <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
       </a>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
 
     <div class="machine-wrap">
+      <h1 class="visually-hidden">Vending Baix Ter — Màquines de vending gratuïtes per a empreses al Baix Ter</h1>
       <span class="sticker sticker--1" data-i18n="machine.sticker1">0€ instal·lació</span>
       <span class="sticker sticker--2" data-i18n="machine.sticker2">0€ manteniment</span>
       <span class="sticker sticker--3" data-i18n="machine.sticker3">24/7</span>
@@ -98,8 +131,8 @@
         <span data-i18n="machine.back">Tornar a la màquina</span>
       </button>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
     <div class="panel-content" tabindex="-1">
@@ -216,9 +249,9 @@
         <div class="container footer-bottom-inner">
           <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
-            <a href="#" data-i18n="footer.legal">Avís legal</a>
-            <a href="#" data-i18n="footer.cookies">Cookies</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="legal.html" data-i18n="footer.legal">Avís legal</a>
+            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
           </div>
         </div>
       </div>
@@ -234,8 +267,8 @@
         <span data-i18n="machine.back">Tornar a la màquina</span>
       </button>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
     <div class="panel-content" tabindex="-1">
@@ -320,9 +353,9 @@
         <div class="container footer-bottom-inner">
           <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
-            <a href="#" data-i18n="footer.legal">Avís legal</a>
-            <a href="#" data-i18n="footer.cookies">Cookies</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="legal.html" data-i18n="footer.legal">Avís legal</a>
+            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
           </div>
         </div>
       </div>
@@ -338,8 +371,8 @@
         <span data-i18n="machine.back">Tornar a la màquina</span>
       </button>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
     <div class="panel-content" tabindex="-1">
@@ -409,9 +442,9 @@
         <div class="container footer-bottom-inner">
           <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
-            <a href="#" data-i18n="footer.legal">Avís legal</a>
-            <a href="#" data-i18n="footer.cookies">Cookies</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="legal.html" data-i18n="footer.legal">Avís legal</a>
+            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
           </div>
         </div>
       </div>
@@ -427,8 +460,8 @@
         <span data-i18n="machine.back">Tornar a la màquina</span>
       </button>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
     <div class="panel-content" tabindex="-1">
@@ -549,9 +582,9 @@
         <div class="container footer-bottom-inner">
           <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
-            <a href="#" data-i18n="footer.legal">Avís legal</a>
-            <a href="#" data-i18n="footer.cookies">Cookies</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="legal.html" data-i18n="footer.legal">Avís legal</a>
+            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
           </div>
         </div>
       </div>
@@ -567,8 +600,8 @@
         <span data-i18n="machine.back">Tornar a la màquina</span>
       </button>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
     <div class="panel-content" tabindex="-1">
@@ -652,9 +685,9 @@
         <div class="container footer-bottom-inner">
           <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
-            <a href="#" data-i18n="footer.legal">Avís legal</a>
-            <a href="#" data-i18n="footer.cookies">Cookies</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="legal.html" data-i18n="footer.legal">Avís legal</a>
+            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
           </div>
         </div>
       </div>
@@ -670,8 +703,8 @@
         <span data-i18n="machine.back">Tornar a la màquina</span>
       </button>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
-        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><svg class="flag" viewBox="0 0 9 9" aria-hidden="true"><rect width="9" height="9" fill="#FCDD09"/><g fill="#DA121A"><rect y="1" width="9" height="1"/><rect y="3" width="9" height="1"/><rect y="5" width="9" height="1"/><rect y="7" width="9" height="1"/></g></svg><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y="0.5" width="3" height="1" fill="#ffc400"/></svg><span class="lang-code">ES</span></button>
       </div>
     </header>
     <div class="panel-content" tabindex="-1">
@@ -731,12 +764,14 @@
               <div class="form-group">
                 <label for="nombre" data-i18n="contact.form.name">Nom *</label>
                 <input type="text" id="nombre" name="nombre"
+                  autocomplete="name"
                   data-i18n-placeholder="contact.form.namePlaceholder"
                   placeholder="El teu nom" required />
               </div>
               <div class="form-group">
                 <label for="empresa" data-i18n="contact.form.company">Empresa</label>
                 <input type="text" id="empresa" name="empresa"
+                  autocomplete="organization"
                   data-i18n-placeholder="contact.form.companyPlaceholder"
                   placeholder="Nom de la teva empresa" />
               </div>
@@ -744,11 +779,11 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="email" data-i18n="contact.form.email">Correu electrònic *</label>
-                <input type="email" id="email" name="email" placeholder="correu@empresa.com" required />
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="correu@empresa.com" required />
               </div>
               <div class="form-group">
                 <label for="telefono" data-i18n="contact.form.phone">Telèfon</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="+34 600 000 000" />
               </div>
             </div>
             <div class="form-group">
@@ -770,7 +805,7 @@
             </div>
             <div class="form-check">
               <input type="checkbox" id="privacidad" name="privacidad" required />
-              <label for="privacidad" data-i18n-html="contact.form.privacy">He llegit i accepto la <a href="#">política de privacitat</a></label>
+              <label for="privacidad" data-i18n-html="contact.form.privacy">He llegit i accepto la <a href="privacy.html">política de privacitat</a></label>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
               <span data-i18n="contact.form.submit">Enviar sol·licitud gratuïta</span>
@@ -816,9 +851,9 @@
         <div class="container footer-bottom-inner">
           <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
           <div class="footer-legal">
-            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
-            <a href="#" data-i18n="footer.legal">Avís legal</a>
-            <a href="#" data-i18n="footer.cookies">Cookies</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="legal.html" data-i18n="footer.legal">Avís legal</a>
+            <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
           </div>
         </div>
       </div>

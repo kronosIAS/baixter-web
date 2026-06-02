@@ -215,3 +215,29 @@ if (form) {
     }, 1200);
   });
 }
+
+// ── ANY DINÀMIC AL COPYRIGHT DEL FOOTER ──
+function currentYear() {
+  // Retorna el año actual usando el objeto estándar Date de JavaScript (método getFullYear).
+  // Impleméntalo con la API estándar (instancia de Date + getFullYear).
+  return new Date().getFullYear();
+}
+function updateCopyrightYear() {
+  const y = currentYear();
+  document.querySelectorAll('[data-i18n="footer.copyright"]').forEach(el => {
+    el.textContent = el.textContent.replace(/^©\s*\d{0,4}\s*/, '© ' + y + ' ');
+  });
+}
+
+// Aplica l'any després de l'applyTranslations que translations.js executa en DOMContentLoaded.
+// translations.js registra el seu handler de DOMContentLoaded abans (es carrega primer), així que
+// el nostre (registrat després) s'executa quan les traduccions ja s'han aplicat. El setTimeout
+// addicional assegura que correm després de TOTS els handlers de DOMContentLoaded.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => setTimeout(updateCopyrightYear, 0));
+} else {
+  setTimeout(updateCopyrightYear, 0);
+}
+
+// Re-aplica l'any després de cada canvi d'idioma (applyTranslations reescriu el textContent).
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => setTimeout(updateCopyrightYear, 0)));

@@ -19,6 +19,8 @@ const i18nData = window.i18nData = {
     'machine.sticker2': '0€ manteniment',
     'machine.sticker3': '24/7',
 
+    'a11y.skip': 'Salta al contingut',
+
     'hero.badge': 'Servei 100% gratuït per a la teva empresa',
     'hero.title': 'Màquines de vending<br /><span class="gradient-text">sense cost per a tu</span>',
     'hero.subtitle': "Instal·lem i mantenim màquines de cafè, snacks i begudes a la teva empresa o establiment <strong>completament gratis</strong>. Sense inversió, sense preocupacions — només beneficis per al teu equip.",
@@ -146,7 +148,7 @@ const i18nData = window.i18nData = {
     'contact.form.notSure': 'Encara no ho tinc clar',
     'contact.form.message': 'Missatge',
     'contact.form.messagePlaceholder': "Explica'ns més sobre el teu establiment o qualsevol dubte que tinguis…",
-    'contact.form.privacy': 'He llegit i accepto la <a href="#">política de privacitat</a>',
+    'contact.form.privacy': 'He llegit i accepto la <a href="privacy.html">política de privacitat</a>',
     'contact.form.submit': 'Enviar sol·licitud gratuïta',
     'contact.form.sending': 'Enviant…',
     'contact.form.success': "Missatge enviat! Et contactarem en menys de 24 hores.",
@@ -162,7 +164,7 @@ const i18nData = window.i18nData = {
     'footer.testimonials': 'Testimonis',
     'footer.contact': 'Contacte',
     'footer.contactForm': 'Formulari de contacte',
-    'footer.copyright': '© 2024 Vending Baix Ter. Tots els drets reservats.',
+    'footer.copyright': '© Vending Baix Ter. Tots els drets reservats.',
     'footer.privacy': 'Política de privacitat',
     'footer.legal': 'Avís legal',
     'footer.cookies': 'Cookies',
@@ -185,6 +187,8 @@ const i18nData = window.i18nData = {
     'machine.sticker1': '0€ instalación',
     'machine.sticker2': '0€ mantenimiento',
     'machine.sticker3': '24/7',
+
+    'a11y.skip': 'Saltar al contenido',
 
     'hero.badge': 'Servicio 100% gratuito para tu empresa',
     'hero.title': 'Máquinas de vending<br /><span class="gradient-text">sin coste para ti</span>',
@@ -313,7 +317,7 @@ const i18nData = window.i18nData = {
     'contact.form.notSure': 'No lo tengo claro aún',
     'contact.form.message': 'Mensaje',
     'contact.form.messagePlaceholder': 'Cuéntanos más sobre tu establecimiento o cualquier duda que tengas…',
-    'contact.form.privacy': 'He leído y acepto la <a href="#">política de privacidad</a>',
+    'contact.form.privacy': 'He leído y acepto la <a href="privacy.html">política de privacidad</a>',
     'contact.form.submit': 'Enviar solicitud gratuita',
     'contact.form.sending': 'Enviando…',
     'contact.form.success': '¡Mensaje enviado! Te contactaremos en menos de 24 horas.',
@@ -329,7 +333,7 @@ const i18nData = window.i18nData = {
     'footer.testimonials': 'Testimonios',
     'footer.contact': 'Contacto',
     'footer.contactForm': 'Formulario de contacto',
-    'footer.copyright': '© 2024 Vending Baix Ter. Todos los derechos reservados.',
+    'footer.copyright': '© Vending Baix Ter. Todos los derechos reservados.',
     'footer.privacy': 'Política de privacidad',
     'footer.legal': 'Aviso legal',
     'footer.cookies': 'Cookies',
