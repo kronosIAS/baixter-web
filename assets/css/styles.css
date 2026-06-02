@@ -8,6 +8,9 @@
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* El atribut [hidden] sempre amaga: les regles d'autor amb display (p. ex. .machine-home{display:flex}) tenen més especificitat que el UA i el desfarien */
+[hidden] { display: none !important; }
+
 :root {
   /* — Brand core — */
   --navy:        #0A2240;
