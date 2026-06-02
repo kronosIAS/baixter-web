@@ -1,4 +1,5 @@
 // ── HELPER i18n PER ELEMENT ──
+// Requires translations.js (loaded before this file) to define window.applyI18nElement
 // (definit a translations.js: window.applyI18nElement)
 function applyI18nTo(el) {
   if (el && window.applyI18nElement) window.applyI18nElement(el);
@@ -39,6 +40,7 @@ function render(route) {
   ROUTES.forEach(r => { if (panels[r]) panels[r].hidden = (r !== route); });
 
   if (valid) {
+    document.querySelectorAll('.vbtn').forEach(b => b.classList.toggle('is-active', b.dataset.route === route));
     const content = panels[route].querySelector('.panel-content');
     if (content) content.focus();
     window.scrollTo(0, 0);
@@ -51,11 +53,13 @@ function render(route) {
 // Navegació no animada + sincronització d'historial
 function navigate(route, { push = true } = {}) {
   render(route);
-  const hash = ROUTES.includes(route) ? '#' + route : '#home';
-  if (push) history.pushState({ route }, '', hash);
+  const url = ROUTES.includes(route) ? '#' + route : location.pathname + location.search;
+  if (push) history.pushState({ route }, '', url);
 }
 
 // ── ANIMACIÓ DE DISPENSAT ──
+let dispensing = false;
+
 function labelFor(route) {
   const btn = document.querySelector(`.vbtn[data-route="${route}"] .vbtn-label`);
   return btn ? btn.textContent.trim() : '';
@@ -78,9 +82,13 @@ function afterReveal(route) {
 
 function dispense(route) {
   if (!ROUTES.includes(route)) { navigate(route); return; }
+  if (dispensing) return;
 
+  document.querySelectorAll('.vbtn').forEach(b => b.classList.remove('is-active'));
   const btn = document.querySelector(`.vbtn[data-route="${route}"]`);
   if (btn) btn.classList.add('is-active');
+
+  dispensing = true;
 
   const lang = window.currentLang || 'ca';
   const dispensingTxt = (window.i18nData && window.i18nData[lang] && window.i18nData[lang]['machine.dispensing']) || 'Dispensant…';
@@ -94,6 +102,7 @@ function dispense(route) {
       setTimeout(() => panels[route].classList.remove('is-entering'), 300);
     }
     afterReveal(route);
+    dispensing = false;
     return;
   }
 
@@ -106,6 +115,7 @@ function dispense(route) {
       setTimeout(() => { if (panels[route]) panels[route].classList.remove('is-entering'); }, 600);
     }
     afterReveal(route);
+    dispensing = false;
   }, 550);
 }
 
