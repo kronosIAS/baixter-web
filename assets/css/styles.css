@@ -1675,3 +1675,31 @@ a { text-decoration: none; color: inherit; }
 .confidence-items { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .confidence-items span { font-family: var(--font-data); font-size: .82rem; color: var(--text-muted); }
 .confidence-items span::before { content: "✓ "; color: var(--amber); }
+
+/* ═══════════ PANELS ═══════════ */
+.panel {
+  position: relative; z-index: 2;
+  min-height: 100vh;
+  background:
+    radial-gradient(900px 500px at 50% -10%, rgba(10,34,64,.30), transparent 60%),
+    var(--bg);
+}
+.panel-bar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; gap: 16px;
+  padding: 12px 24px;
+  background: rgba(12,12,12,.86); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.panel-bar .logo { margin-right: auto; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--amber); color: #111;
+  font-family: var(--font-display); font-weight: 700; font-size: .82rem;
+  border: none; border-radius: var(--radius-sm); padding: 9px 16px; cursor: pointer;
+  transition: var(--transition);
+}
+.back-btn:hover { background: var(--amber-light); transform: translateX(-2px); }
+.back-btn:focus-visible { outline: 2px solid var(--amber-light); outline-offset: 2px; }
+.panel-content { max-width: 1180px; margin: 0 auto; padding: 70px 24px; outline: none; }
+.panel-footer { margin-top: 0; }
