@@ -1,3 +1,12 @@
+# NOTA: aquest script necessita actualització per al nou model de navegació.
+# La web ara és una màquina de vending interactiva: la pàgina d'inici mostra la
+# màquina i les 6 seccions s'obren com a panells de pantalla completa via hash
+# routing (#serveis, #avantatges, #com-funciona, #a-qui-servim, #atencio, #contacte).
+# Amb la implementació actual, el PDF només captura la pantalla d'inici (la màquina);
+# els panells de secció queden ocults i no apareixen al PDF generat.
+# Per capturar totes les seccions caldria navegar a cada hash, esperar que el panell
+# s'activi i combinar les captures en un únic PDF — canvi no trivial pendent de fer.
+
 import asyncio
 import os
 from playwright.async_api import async_playwright
