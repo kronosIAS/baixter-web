@@ -87,13 +87,743 @@
     </div>
   </section>
 
-  <!-- ════════ PANELS (se rellenan en Task 4) ════════ -->
-  <section class="panel" id="serveis" hidden></section>
-  <section class="panel" id="avantatges" hidden></section>
-  <section class="panel" id="com-funciona" hidden></section>
-  <section class="panel" id="a-qui-servim" hidden></section>
-  <section class="panel" id="atencio" hidden></section>
-  <section class="panel" id="contacte" hidden></section>
+  <!-- ════════ PANELS ════════ -->
+
+  <!-- ════════ PANEL · SERVEIS ════════ -->
+  <section class="panel" id="serveis" hidden aria-labelledby="serveis-title">
+    <header class="panel-bar">
+      <a href="#home" class="logo" aria-label="Baixter – Inici"><img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" /></a>
+      <button type="button" class="back-btn" data-back>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="machine.back">Tornar a la màquina</span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+      </div>
+    </header>
+    <div class="panel-content" tabindex="-1">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="services.tag">Els nostres serveis</span>
+        <h2 class="section-title" id="serveis-title" data-i18n-html="services.title">Tot el que el teu equip necessita,<br />en un sol espai</h2>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card service-card--featured">
+          <div class="service-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+              alt="Màquina de cafè vending"
+              loading="lazy"
+            />
+            <div class="service-img-overlay"></div>
+            <div class="service-tag-pill" data-i18n="services.popular">Més popular</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.coffee.title">Màquines de Cafè</h3>
+            <p class="service-desc" data-i18n="services.coffee.desc">Cafè exprés, americà, cappuccino i més, amb preparació automàtica.</p>
+            <ul class="service-features">
+              <li data-i18n="services.coffee.f1">Cafè en gra mòlt al moment</li>
+              <li data-i18n="services.coffee.f2">Opcions de llet calenta i freda</li>
+              <li data-i18n="services.coffee.f3">Xocolata calenta i infusions</li>
+              <li data-i18n="services.coffee.f4">Tasses o gots d'un sol ús inclosos</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img
+              src="assets/images/snack.jpg"
+              alt="Snacks i menjar en vending"
+              loading="lazy"
+            />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M11 8h.01M15 8h.01M7 12h.01M11 12h.01M15 12h.01"/></svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.snacks.title">Màquines de Snacks</h3>
+            <p class="service-desc" data-i18n="services.snacks.desc">Brioixeria, fruits secs, barretes i aperitius per a qualsevol hora.</p>
+            <ul class="service-features">
+              <li data-i18n="services.snacks.f1">Més de 40 referències de producte</li>
+              <li data-i18n="services.snacks.f2">Opcions saludables i tradicionals</li>
+              <li data-i18n="services.snacks.f3">Productes frescos i envasats</li>
+              <li data-i18n="services.snacks.f4">Reposició periòdica garantida</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img
+              src="assets/images/refrescos.jpg"
+              alt="Begudes fredes en màquina vending"
+              loading="lazy"
+            />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M8 11l2 2 4-4"/></svg>
+            </div>
+            <h3 class="service-title" data-i18n="services.drinks.title">Màquines de Begudes</h3>
+            <p class="service-desc" data-i18n="services.drinks.desc">Aigua, refrescs, sucs i begudes energètiques sempre a la temperatura perfecta.</p>
+            <ul class="service-features">
+              <li data-i18n="services.drinks.f1">Refrescs de les principals marques</li>
+              <li data-i18n="services.drinks.f2">Aigua mineral freda i natural</li>
+              <li data-i18n="services.drinks.f3">Sucs i begudes isotòniques</li>
+              <li data-i18n="services.drinks.f4">Temperatura òptima garantida</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <footer class="footer panel-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Baixter – Serveis de Vending">
+            <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
+          </a>
+          <p data-i18n="footer.desc">Servei de vending gratuït per a empreses i establiments del Baix Ter i comarques veïnes.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5 data-i18n="footer.services">Serveis</h5>
+            <a href="#serveis" data-i18n="footer.coffee">Màquines de cafè</a>
+            <a href="#serveis" data-i18n="footer.snacks">Màquines de snacks</a>
+            <a href="#serveis" data-i18n="footer.drinks">Màquines de begudes</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.company">Empresa</h5>
+            <a href="#avantatges" data-i18n="footer.whyUs">Per què escollir-nos</a>
+            <a href="#com-funciona" data-i18n="footer.howItWorks">Com funciona</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.contact">Contacte</h5>
+            <a href="tel:+34605913964">+34 605 91 39 64</a>
+            <a href="mailto:info@vendingbaixter.com">info@vendingbaixter.com</a>
+            <a href="#contacte" data-i18n="footer.contactForm">Formulari de contacte</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="#" data-i18n="footer.legal">Avís legal</a>
+            <a href="#" data-i18n="footer.cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ════════ PANEL · AVANTATGES ════════ -->
+  <section class="panel" id="avantatges" hidden aria-labelledby="avantatges-title">
+    <header class="panel-bar">
+      <a href="#home" class="logo" aria-label="Baixter – Inici"><img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" /></a>
+      <button type="button" class="back-btn" data-back>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="machine.back">Tornar a la màquina</span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+      </div>
+    </header>
+    <div class="panel-content" tabindex="-1">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="advantages.tag">Per què escollir-nos?</span>
+        <h2 class="section-title" id="avantatges-title" data-i18n-html="advantages.title">La solució més intel·ligent<br />per a la teva empresa</h2>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4 data-i18n="advantages.a1.title">Cost zero</h4>
+          <p data-i18n="advantages.a1.desc">Instal·lació, manteniment i reposició totalment gratuïts.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4 data-i18n="advantages.a2.title">Resposta ràpida</h4>
+          <p data-i18n="advantages.a2.desc">Equip tècnic local que resol qualsevol incidència ràpidament.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          </div>
+          <h4 data-i18n="advantages.a3.title">Sense compromisos</h4>
+          <p data-i18n="advantages.a3.desc">Pots sol·licitar retirar la màquina en qualsevol moment.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4 data-i18n="advantages.a4.title">Màquines homologades</h4>
+          <p data-i18n="advantages.a4.desc">Tot l'equipament compleix la normativa i els controls d'higiene.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4 data-i18n="advantages.a5.title">Benestar de l'equip</h4>
+          <p data-i18n="advantages.a5.desc">Treballadors més satisfets i productius gràcies a un bon servei.</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h4 data-i18n="advantages.a6.title">Servei local</h4>
+          <p data-i18n="advantages.a6.desc">Empresa del Baix Ter amb tracte proper i personalitzat.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer panel-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Baixter – Serveis de Vending">
+            <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
+          </a>
+          <p data-i18n="footer.desc">Servei de vending gratuït per a empreses i establiments del Baix Ter i comarques veïnes.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5 data-i18n="footer.services">Serveis</h5>
+            <a href="#serveis" data-i18n="footer.coffee">Màquines de cafè</a>
+            <a href="#serveis" data-i18n="footer.snacks">Màquines de snacks</a>
+            <a href="#serveis" data-i18n="footer.drinks">Màquines de begudes</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.company">Empresa</h5>
+            <a href="#avantatges" data-i18n="footer.whyUs">Per què escollir-nos</a>
+            <a href="#com-funciona" data-i18n="footer.howItWorks">Com funciona</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.contact">Contacte</h5>
+            <a href="tel:+34605913964">+34 605 91 39 64</a>
+            <a href="mailto:info@vendingbaixter.com">info@vendingbaixter.com</a>
+            <a href="#contacte" data-i18n="footer.contactForm">Formulari de contacte</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="#" data-i18n="footer.legal">Avís legal</a>
+            <a href="#" data-i18n="footer.cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ════════ PANEL · COM FUNCIONA ════════ -->
+  <section class="panel" id="com-funciona" hidden aria-labelledby="com-funciona-title">
+    <header class="panel-bar">
+      <a href="#home" class="logo" aria-label="Baixter – Inici"><img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" /></a>
+      <button type="button" class="back-btn" data-back>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="machine.back">Tornar a la màquina</span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+      </div>
+    </header>
+    <div class="panel-content" tabindex="-1">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="howItWorks.tag">Procés senzill</span>
+        <h2 class="section-title" id="com-funciona-title" data-i18n="howItWorks.title">Comença en 3 passos</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 data-i18n="howItWorks.step1.title">Contacta'ns</h3>
+            <p data-i18n="howItWorks.step1.desc">Escriu-nos o truca'ns i et responem en menys de 24 hores.</p>
+          </div>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l6 6-6 6" stroke="#F2A900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 data-i18n="howItWorks.step2.title">Planifiquem junts</h3>
+            <p data-i18n="howItWorks.step2.desc">Visitem el teu local i triem les màquines i la ubicació ideal.</p>
+          </div>
+        </div>
+        <div class="step-connector">
+          <svg width="40" height="16" viewBox="0 0 40 16" fill="none"><path d="M0 8h36M30 2l6 6-6 6" stroke="#F2A900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 data-i18n="howItWorks.step3.title">Instal·lem i llest</h3>
+            <p data-i18n="howItWorks.step3.desc">Instal·lem i aprovisionem la màquina; el manteniment va per nosaltres.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer panel-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Baixter – Serveis de Vending">
+            <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
+          </a>
+          <p data-i18n="footer.desc">Servei de vending gratuït per a empreses i establiments del Baix Ter i comarques veïnes.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5 data-i18n="footer.services">Serveis</h5>
+            <a href="#serveis" data-i18n="footer.coffee">Màquines de cafè</a>
+            <a href="#serveis" data-i18n="footer.snacks">Màquines de snacks</a>
+            <a href="#serveis" data-i18n="footer.drinks">Màquines de begudes</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.company">Empresa</h5>
+            <a href="#avantatges" data-i18n="footer.whyUs">Per què escollir-nos</a>
+            <a href="#com-funciona" data-i18n="footer.howItWorks">Com funciona</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.contact">Contacte</h5>
+            <a href="tel:+34605913964">+34 605 91 39 64</a>
+            <a href="mailto:info@vendingbaixter.com">info@vendingbaixter.com</a>
+            <a href="#contacte" data-i18n="footer.contactForm">Formulari de contacte</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="#" data-i18n="footer.legal">Avís legal</a>
+            <a href="#" data-i18n="footer.cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ════════ PANEL · A QUI SERVIM ════════ -->
+  <section class="panel" id="a-qui-servim" hidden aria-labelledby="a-qui-servim-title">
+    <header class="panel-bar">
+      <a href="#home" class="logo" aria-label="Baixter – Inici"><img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" /></a>
+      <button type="button" class="back-btn" data-back>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="machine.back">Tornar a la màquina</span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+      </div>
+    </header>
+    <div class="panel-content" tabindex="-1">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="clients.tag">Qui ens tria?</span>
+        <h2 class="section-title" id="a-qui-servim-title" data-i18n-html="clients.title">Vending per a qualsevol<br/><span class="gradient-text">tipus d'empresa</span></h2>
+      </div>
+      <div class="sectors-wrap">
+        <div class="sectors-diagram">
+          <svg class="sectors-svg" viewBox="0 0 300 300" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="150" y1="150" x2="50" y2="50"/>
+            <line x1="150" y1="150" x2="150" y2="50"/>
+            <line x1="150" y1="150" x2="250" y2="50"/>
+            <line x1="150" y1="150" x2="50" y2="150"/>
+            <line x1="150" y1="150" x2="250" y2="150"/>
+            <line x1="150" y1="150" x2="50" y2="250"/>
+            <line x1="150" y1="150" x2="150" y2="250"/>
+            <line x1="150" y1="150" x2="250" y2="250"/>
+          </svg>
+          <div class="sectors-grid">
+            <!-- Hospital -->
+            <div class="sector-node" style="--c:#ff6b6b">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.hospital">Hospitals</span>
+            </div>
+            <!-- Col·legi -->
+            <div class="sector-node" style="--c:#4ecdc4">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.school">Col·legis</span>
+            </div>
+            <!-- Fàbrica -->
+            <div class="sector-node" style="--c:#ffa726">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M2 20V9l6 3V9l6 3V6h4v14"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.factory">Indústria</span>
+            </div>
+            <!-- Oficines -->
+            <div class="sector-node" style="--c:#ab47bc">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="15"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.office">Oficines</span>
+            </div>
+            <!-- CENTER HUB -->
+            <div class="sector-node sector-node--center">
+              <div class="sector-center-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6M9 11h4"/><circle cx="13" cy="15" r="2"/><path d="M5 19h14"/></svg>
+              </div>
+              <div class="sector-center-brand">Vending <strong>Baix Ter</strong></div>
+              <span class="sector-center-sub" data-i18n="clients.center">Les teves màquines</span>
+            </div>
+            <!-- Hotel -->
+            <div class="sector-node" style="--c:#42a5f5">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M22 4v16M7 8h10a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><path d="M2 20h20"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.hotel">Hotels</span>
+            </div>
+            <!-- Gimnàs -->
+            <div class="sector-node" style="--c:#66bb6a">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="12" r="2.5"/><circle cx="16.5" cy="12" r="2.5"/><path d="M10 12h4M3 10.5v3M21 10.5v3"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.gym">Gimnasos</span>
+            </div>
+            <!-- Residència -->
+            <div class="sector-node" style="--c:#26c6da">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.residence">Residències</span>
+            </div>
+            <!-- Administracions -->
+            <div class="sector-node" style="--c:#ec407a">
+              <div class="sector-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18M3 10h18M5 6l7-3 7 3M4 10v12M8 10v12M12 10v12M16 10v12M20 10v12"/></svg>
+              </div>
+              <span class="sector-label" data-i18n="clients.gov">Administracions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer panel-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Baixter – Serveis de Vending">
+            <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
+          </a>
+          <p data-i18n="footer.desc">Servei de vending gratuït per a empreses i establiments del Baix Ter i comarques veïnes.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5 data-i18n="footer.services">Serveis</h5>
+            <a href="#serveis" data-i18n="footer.coffee">Màquines de cafè</a>
+            <a href="#serveis" data-i18n="footer.snacks">Màquines de snacks</a>
+            <a href="#serveis" data-i18n="footer.drinks">Màquines de begudes</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.company">Empresa</h5>
+            <a href="#avantatges" data-i18n="footer.whyUs">Per què escollir-nos</a>
+            <a href="#com-funciona" data-i18n="footer.howItWorks">Com funciona</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.contact">Contacte</h5>
+            <a href="tel:+34605913964">+34 605 91 39 64</a>
+            <a href="mailto:info@vendingbaixter.com">info@vendingbaixter.com</a>
+            <a href="#contacte" data-i18n="footer.contactForm">Formulari de contacte</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="#" data-i18n="footer.legal">Avís legal</a>
+            <a href="#" data-i18n="footer.cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ════════ PANEL · ATENCIÓ AL CLIENT (SAT) ════════ -->
+  <section class="panel" id="atencio" hidden aria-labelledby="atencio-title">
+    <header class="panel-bar">
+      <a href="#home" class="logo" aria-label="Baixter – Inici"><img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" /></a>
+      <button type="button" class="back-btn" data-back>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="machine.back">Tornar a la màquina</span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+      </div>
+    </header>
+    <div class="panel-content" tabindex="-1">
+      <div class="sat-layout">
+        <div class="sat-visual">
+          <img src="assets/images/logo-baixter.jpg" alt="Logo Baixter – Serveis de Vending" class="sat-card-img" />
+        </div>
+      <div class="sat-card">
+        <div class="sat-header">
+          <div class="sat-info-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="sat-titles">
+            <span id="atencio-title">Atenció al client</span>
+            <span>Atención al cliente</span>
+            <span>Customer service</span>
+          </div>
+        </div>
+
+        <div class="sat-contacts">
+          <a href="tel:+34605913963" class="sat-contact-row">
+            <div class="sat-contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.07 6.07l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="sat-contact-label">Pere: 605 91 39 63</span>
+          </a>
+          <a href="tel:+34605913964" class="sat-contact-row">
+            <div class="sat-contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.07 6.07l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="sat-contact-label">Jordi: 605 91 39 64</span>
+          </a>
+          <a href="mailto:sat@vendingbaixter.com" class="sat-contact-row">
+            <div class="sat-contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span class="sat-contact-label">sat@vendingbaixter.com</span>
+          </a>
+        </div>
+
+        <div class="sat-machine-field">
+          <label for="numMaquina">NUM. MÀQUINA</label>
+          <input type="text" id="numMaquina" name="numMaquina"
+            data-i18n-placeholder="sat.placeholder"
+            placeholder="Número de la teva màquina" />
+        </div>
+
+        <div class="sat-footer-brand">vendingbaixter.com</div>
+      </div>
+      </div><!-- end sat-layout -->
+    </div>
+    <footer class="footer panel-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Baixter – Serveis de Vending">
+            <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
+          </a>
+          <p data-i18n="footer.desc">Servei de vending gratuït per a empreses i establiments del Baix Ter i comarques veïnes.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5 data-i18n="footer.services">Serveis</h5>
+            <a href="#serveis" data-i18n="footer.coffee">Màquines de cafè</a>
+            <a href="#serveis" data-i18n="footer.snacks">Màquines de snacks</a>
+            <a href="#serveis" data-i18n="footer.drinks">Màquines de begudes</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.company">Empresa</h5>
+            <a href="#avantatges" data-i18n="footer.whyUs">Per què escollir-nos</a>
+            <a href="#com-funciona" data-i18n="footer.howItWorks">Com funciona</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.contact">Contacte</h5>
+            <a href="tel:+34605913964">+34 605 91 39 64</a>
+            <a href="mailto:info@vendingbaixter.com">info@vendingbaixter.com</a>
+            <a href="#contacte" data-i18n="footer.contactForm">Formulari de contacte</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="#" data-i18n="footer.legal">Avís legal</a>
+            <a href="#" data-i18n="footer.cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ════════ PANEL · CONTACTE ════════ -->
+  <section class="panel" id="contacte" hidden aria-labelledby="contacte-title">
+    <header class="panel-bar">
+      <a href="#home" class="logo" aria-label="Baixter – Inici"><img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" /></a>
+      <button type="button" class="back-btn" data-back>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-i18n="machine.back">Tornar a la màquina</span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="ca" aria-label="Català"><span class="fi fi-es-ct fis"></span><span class="lang-code">CA</span></button>
+        <button class="lang-btn" data-lang="es" aria-label="Español"><span class="fi fi-es fis"></span><span class="lang-code">ES</span></button>
+      </div>
+    </header>
+    <div class="panel-content" tabindex="-1">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="contact.tag">Contacta amb nosaltres</span>
+        <h2 class="section-title" id="contacte-title" data-i18n="cta.title">La teva empresa encara no té vending?</h2>
+        <p class="section-subtitle" data-i18n="cta.desc">Uneix-te als negocis del Baix Ter que ja gaudeixen d'un servei de qualitat sense pagar res. El procés és senzill i sense risc.</p>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div class="contact-photo">
+            <img
+              src="assets/images/maquina-baixter.jpg"
+              alt="Màquina de vending Baix Ter"
+              loading="lazy"
+            />
+            <div class="contact-photo-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span data-i18n="contact.photoBadge">Instal·lació gratuïta · Sense permanència</span>
+            </div>
+          </div>
+
+          <div class="contact-methods">
+            <a href="tel:+34605913964" class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.94a16 16 0 0 0 6.07 6.07l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.91 16.92z"/></svg>
+              </div>
+              <div>
+                <span class="contact-method-label" data-i18n="contact.phone">Telèfon</span>
+                <span class="contact-method-value">+34 605 91 39 64</span>
+              </div>
+            </a>
+            <a href="mailto:info@vendingbaixter.com" class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact-method-label" data-i18n="contact.email">Correu electrònic</span>
+                <span class="contact-method-value">info@vendingbaixter.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/34605913964" class="contact-method">
+              <div class="contact-method-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div>
+                <span class="contact-method-label">WhatsApp</span>
+                <span class="contact-method-value" data-i18n="contact.whatsapp">Escriu-nos ara</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <h3 data-i18n="contact.form.title">Sol·licita informació gratuïta</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre" data-i18n="contact.form.name">Nom *</label>
+                <input type="text" id="nombre" name="nombre"
+                  data-i18n-placeholder="contact.form.namePlaceholder"
+                  placeholder="El teu nom" required />
+              </div>
+              <div class="form-group">
+                <label for="empresa" data-i18n="contact.form.company">Empresa</label>
+                <input type="text" id="empresa" name="empresa"
+                  data-i18n-placeholder="contact.form.companyPlaceholder"
+                  placeholder="Nom de la teva empresa" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" data-i18n="contact.form.email">Correu electrònic *</label>
+                <input type="email" id="email" name="email" placeholder="correu@empresa.com" required />
+              </div>
+              <div class="form-group">
+                <label for="telefono" data-i18n="contact.form.phone">Telèfon</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="tipo" data-i18n="contact.form.machineType">Quin tipus de màquina t'interessa?</label>
+              <select id="tipo" name="tipo">
+                <option value="" data-i18n="contact.form.selectOption">Selecciona una opció</option>
+                <option value="cafe" data-i18n="contact.form.coffee">Màquina de cafè</option>
+                <option value="snacks" data-i18n="contact.form.snacks">Màquina de snacks / menjar</option>
+                <option value="bebidas" data-i18n="contact.form.drinks">Màquina de begudes</option>
+                <option value="combo" data-i18n="contact.form.combo">Combinació de diverses</option>
+                <option value="otros" data-i18n="contact.form.notSure">Encara no ho tinc clar</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje" data-i18n="contact.form.message">Missatge</label>
+              <textarea id="mensaje" name="mensaje" rows="3"
+                data-i18n-placeholder="contact.form.messagePlaceholder"
+                placeholder="Explica'ns més sobre el teu establiment o qualsevol dubte que tinguis…"></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="privacidad" name="privacidad" required />
+              <label for="privacidad" data-i18n-html="contact.form.privacy">He llegit i accepto la <a href="#">política de privacitat</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span data-i18n="contact.form.submit">Enviar sol·licitud gratuïta</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span data-i18n="contact.form.success">Missatge enviat! Et contactarem en menys de 24 hores.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer panel-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Baixter – Serveis de Vending">
+            <img src="assets/images/logo-baixter.jpg" alt="Baixter – Serveis de Vending" class="logo-img" />
+          </a>
+          <p data-i18n="footer.desc">Servei de vending gratuït per a empreses i establiments del Baix Ter i comarques veïnes.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5 data-i18n="footer.services">Serveis</h5>
+            <a href="#serveis" data-i18n="footer.coffee">Màquines de cafè</a>
+            <a href="#serveis" data-i18n="footer.snacks">Màquines de snacks</a>
+            <a href="#serveis" data-i18n="footer.drinks">Màquines de begudes</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.company">Empresa</h5>
+            <a href="#avantatges" data-i18n="footer.whyUs">Per què escollir-nos</a>
+            <a href="#com-funciona" data-i18n="footer.howItWorks">Com funciona</a>
+          </div>
+          <div class="footer-col">
+            <h5 data-i18n="footer.contact">Contacte</h5>
+            <a href="tel:+34605913964">+34 605 91 39 64</a>
+            <a href="mailto:info@vendingbaixter.com">info@vendingbaixter.com</a>
+            <a href="#contacte" data-i18n="footer.contactForm">Formulari de contacte</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p data-i18n="footer.copyright">© 2024 Vending Baix Ter. Tots els drets reservats.</p>
+          <div class="footer-legal">
+            <a href="#" data-i18n="footer.privacy">Política de privacitat</a>
+            <a href="#" data-i18n="footer.legal">Avís legal</a>
+            <a href="#" data-i18n="footer.cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
 
 </main>
 
