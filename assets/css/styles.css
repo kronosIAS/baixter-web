@@ -567,6 +567,26 @@ a { text-decoration: none; color: inherit; }
   text-align: center;
 }
 
+/* Compactar "A qui servim" perquè títol + esquema siguin visibles d'un cop en entrar.
+   Acotat a aquesta secció per no afectar la resta de panells. */
+#a-qui-servim .panel-content {
+  min-height: calc(100vh - 75px); /* alçada visible menys la barra superior (logo 50px + padding) */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+#a-qui-servim .section-header {
+  margin-bottom: 22px; /* acosta l'esquema al títol */
+}
+#a-qui-servim .sectors-diagram {
+  /* l'esquema mai supera l'alçada disponible: escala amb el viewport */
+  max-width: min(540px, calc(100vh - 312px));
+}
+/* evita que el text del hub central es parteixi en dues línies quan l'esquema és petit */
+#a-qui-servim .sector-center-brand { white-space: nowrap; }
+
 /* ── SAT / ATENCIÓ AL CLIENT (navy contact-box card) ── */
 .sat-layout { display: flex; align-items: center; justify-content: center; gap: 56px; }
 .sat-visual { flex-shrink: 0; }
@@ -639,8 +659,9 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: .01em;
 }
 
-.sat-machine-field { margin-bottom: 20px; }
-.sat-machine-field label {
+/* Cuadro de WhatsApp directe (SAT) */
+.sat-whatsapp { margin-bottom: 20px; }
+.sat-whatsapp-title {
   display: block;
   font-family: var(--font-data);
   font-size: .7rem;
@@ -648,22 +669,32 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--amber-light);
-  margin-bottom: 9px;
+  margin-bottom: 11px;
 }
-.sat-machine-field input {
-  width: 100%;
-  padding: 12px 16px;
-  background: rgba(0,0,0,.25);
-  border: 1px solid rgba(255,255,255,.14);
+.sat-whatsapp-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sat-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 14px;
+  background: #25D366;
+  color: #07331c;
+  border: 1px solid transparent;
   border-radius: var(--radius-sm);
-  color: #fff;
   font-family: var(--font-data);
-  font-size: .95rem;
-  outline: none;
-  transition: border-color .2s;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  transition: var(--transition);
 }
-.sat-machine-field input::placeholder { color: rgba(255,255,255,.3); }
-.sat-machine-field input:focus { border-color: var(--amber); }
+.sat-wa-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+.sat-wa-btn:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,211,102,.32);
+}
+.sat-wa-btn:focus-visible { outline: 2px solid #25D366; outline-offset: 2px; }
 
 .sat-footer-brand {
   text-align: center;
@@ -703,6 +734,16 @@ a { text-decoration: none; color: inherit; }
   transition: filter var(--transition);
 }
 .contact-photo:hover img { filter: grayscale(45%) contrast(1.04) brightness(.85); }
+
+/* Variant logo: mostra el logo de l'empresa sencer i en color (sense retall ni filtre B/N) */
+.contact-photo--logo { background: var(--bg-deep); }
+.contact-photo--logo img {
+  object-fit: contain;
+  filter: none;
+  box-sizing: border-box;
+  padding: 16px;
+}
+.contact-photo--logo:hover img { filter: none; }
 .contact-photo-badge {
   position: absolute;
   bottom: 12px; left: 12px;
@@ -1007,18 +1048,29 @@ a { text-decoration: none; color: inherit; }
 .sticker {
   position: absolute; z-index: 5;
   background: var(--amber); color: #111;
-  font-family: var(--font-display); font-weight: 800; font-size: .82rem;
-  padding: 7px 12px; border-radius: var(--radius-xs);
+  font-family: var(--font-display); font-weight: 800; font-size: .9rem;
+  padding: 8px 14px; border-radius: var(--radius-xs);
   box-shadow: 0 6px 18px rgba(242,169,0,.4);
 }
-.sticker--1 { top: 4%;  left: calc(50% - 230px); transform: rotate(-7deg); }
-.sticker--2 { top: 22%; left: calc(50% + 150px); transform: rotate(6deg); }
-.sticker--3 { top: 60%; left: calc(50% + 165px); transform: rotate(-4deg); font-size: 1rem; }
+.sticker--1 { top: 3%;  left: calc(50% - 300px); transform: rotate(-7deg); }
+.sticker--2 { top: 16%; left: calc(50% + 185px); transform: rotate(6deg); }
+.sticker--3 { top: 62%; left: calc(50% + 235px); transform: rotate(-4deg); font-size: 1.12rem; }
+
+/* Rang tauleta (601–768px): la màquina segueix centrada a 440px, així que
+   reposicionem les pegatines de la dreta perquè no surtin de pantalla,
+   mantenint el "24/7" just fora de la vora dreta sense tapar els botons.
+   (Va després de les regles base perquè la cascada li doni prioritat.) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .sticker { font-size: .8rem; padding: 7px 11px; }
+  .sticker--1 { top: 2%;  left: calc(50% - 280px); }
+  .sticker--2 { top: 10%; left: calc(50% + 120px); }
+  .sticker--3 { top: 60%; left: calc(50% + 233px); font-size: .9rem; }
+}
 
 /* Cabina */
 .machine {
   position: relative;
-  width: 360px; max-width: 86vw;
+  width: 440px; max-width: 90vw;
   background: linear-gradient(150deg, #262626 0%, #161616 45%, #0e0e0e 100%);
   border: 1px solid #3a3a3a;
   border-radius: 16px 16px 6px 6px;
@@ -1027,13 +1079,13 @@ a { text-decoration: none; color: inherit; }
   display: flex; flex-direction: column; gap: 14px;
 }
 .machine-head { display: flex; align-items: baseline; justify-content: space-between; }
-.machine-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; letter-spacing: -.03em; color: #fff; }
+.machine-logo { font-family: var(--font-display); font-weight: 800; font-size: 2.15rem; letter-spacing: -.03em; color: #fff; }
 .machine-logo b { color: var(--amber); }
 .machine-sub { font-family: var(--font-data); font-size: .6rem; letter-spacing: .25em; text-transform: uppercase; color: var(--text-dim); }
 
 .machine-body { display: flex; gap: 14px; }
 .showcase {
-  width: 130px; flex-shrink: 0;
+  width: 155px; flex-shrink: 0;
   border-radius: var(--radius-sm); border: 1px solid #333; overflow: hidden;
   position: relative; display: grid; grid-template-rows: 1fr 1fr;
 }
@@ -1046,23 +1098,23 @@ a { text-decoration: none; color: inherit; }
   background: linear-gradient(160deg, var(--navy), var(--navy-deep));
   border: 1px solid #1b3f68;
   box-shadow: inset 0 0 16px rgba(0,0,0,.6);
-  padding: 10px; min-height: 52px;
+  padding: 12px; min-height: 62px;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
   transition: box-shadow var(--transition), border-color var(--transition);
 }
-.display-eyebrow { font-family: var(--font-data); font-weight: 700; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); }
-.display-main { font-family: var(--font-display); font-weight: 800; font-size: .95rem; color: var(--display-text); text-align: center; }
+.display-eyebrow { font-family: var(--font-data); font-weight: 700; font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); }
+.display-main { font-family: var(--font-display); font-weight: 800; font-size: 1.12rem; color: var(--display-text); text-align: center; }
 
 .keypad { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
 .vbtn {
-  display: flex; align-items: center; gap: 8px;
-  padding: 8px 10px;
+  display: flex; align-items: center; gap: 9px;
+  padding: 11px 13px;
   background: #1b1b1b; border: 1px solid #343434; border-radius: var(--radius-xs);
   cursor: pointer; transition: var(--transition);
   font-family: var(--font-data); text-align: left;
 }
-.vbtn-code { font-weight: 700; font-size: .6rem; color: var(--text-dim); background: var(--bg-deep); border: 1px solid var(--border); border-radius: 2px; padding: 2px 4px; flex-shrink: 0; }
-.vbtn-label { font-weight: 700; font-size: .74rem; color: var(--text-muted); line-height: 1.1; }
+.vbtn-code { font-weight: 700; font-size: .66rem; color: var(--text-dim); background: var(--bg-deep); border: 1px solid var(--border); border-radius: 2px; padding: 3px 5px; flex-shrink: 0; }
+.vbtn-label { font-weight: 700; font-size: .85rem; color: var(--text-muted); line-height: 1.1; }
 .vbtn:hover, .vbtn:focus-visible {
   background: var(--surface-3); border-color: var(--amber); outline: none;
   box-shadow: 0 0 0 2px rgba(242,169,0,.25);
@@ -1072,7 +1124,7 @@ a { text-decoration: none; color: inherit; }
 .vbtn.is-active .vbtn-label { color: var(--amber-light); }
 
 .tray {
-  position: relative; height: 38px;
+  position: relative; height: 46px;
   background: #070707; border: 1px solid #2a2a2a; border-radius: var(--radius-sm);
   box-shadow: inset 0 8px 16px rgba(0,0,0,.85);
   overflow: hidden;
@@ -1140,7 +1192,7 @@ a { text-decoration: none; color: inherit; }
   50%     { box-shadow: inset 0 0 18px rgba(242,169,0,.7), 0 0 16px rgba(242,169,0,.4); }
 }
 
-.panel.is-entering { animation: panelRise .55s cubic-bezier(.2,.7,.2,1); transform-origin: bottom center; }
+.panel.is-entering { animation: panelRise 2.05s cubic-bezier(.33,0,.3,1); transform-origin: bottom center; }
 @keyframes panelRise {
   0%   { opacity: 0; transform: translateY(60%) scale(.85); }
   100% { opacity: 1; transform: translateY(0) scale(1); }
@@ -1163,6 +1215,7 @@ a { text-decoration: none; color: inherit; }
   .sticker--3 { right: 8px; left: auto; top: 50%; }
   .panel-content { padding: 40px 18px; }
   .panel-bar { gap: 10px; padding: 10px 16px; }
+  .sat-whatsapp-btns { grid-template-columns: 1fr; }
   /* Botó només-icona, però el text segueix sent el nom accessible (lectors de pantalla) */
   .back-btn span {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;

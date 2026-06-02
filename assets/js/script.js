@@ -112,7 +112,7 @@ function dispense(route) {
     revealPanel(route);
     if (panels[route]) {
       panels[route].classList.add('is-entering');
-      setTimeout(() => { if (panels[route]) panels[route].classList.remove('is-entering'); }, 600);
+      setTimeout(() => { if (panels[route]) panels[route].classList.remove('is-entering'); }, 2100);
     }
     afterReveal(route);
     dispensing = false;

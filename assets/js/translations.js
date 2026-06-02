@@ -11,8 +11,8 @@ const i18nData = window.i18nData = {
     'nav.requestFree': 'Sol·licitar gratis',
 
     'machine.sub': 'Serveis de Vending',
-    'machine.displayEyebrow': 'Selecciona',
-    'machine.displayIdle': 'una secció',
+    'machine.displayEyebrow': 'Per a la teva empresa',
+    'machine.displayIdle': 'Vending 100% gratuït',
     'machine.dispensing': 'Dispensant…',
     'machine.back': 'Tornar a la màquina',
     'machine.sticker1': '0€ instal·lació',
@@ -123,7 +123,7 @@ const i18nData = window.i18nData = {
     'testimonials.t3': "\"Tenim màquina de cafè i de snacks. Els nois del gimnàs agraeixen molt poder agafar alguna cosa després de l'entrenament. Un servei de 10.\"",
     'testimonials.t3.role': 'Propietària – Centre esportiu',
 
-    'sat.placeholder': 'Número de la teva màquina',
+    'sat.whatsappTitle': "Envia'ns un WhatsApp",
 
     'contact.tag': 'Contacta amb nosaltres',
     'contact.title': 'Parlem sense compromís',
@@ -180,8 +180,8 @@ const i18nData = window.i18nData = {
     'nav.requestFree': 'Solicitar gratis',
 
     'machine.sub': 'Servicios de Vending',
-    'machine.displayEyebrow': 'Selecciona',
-    'machine.displayIdle': 'una sección',
+    'machine.displayEyebrow': 'Para tu empresa',
+    'machine.displayIdle': 'Vending 100% gratis',
     'machine.dispensing': 'Dispensando…',
     'machine.back': 'Volver a la máquina',
     'machine.sticker1': '0€ instalación',
@@ -292,7 +292,7 @@ const i18nData = window.i18nData = {
     'testimonials.t3': '"Tenemos máquina de café y de snacks. Los chicos del gimnasio agradecen mucho poder pillar algo después del entrenamiento. Un servicio de 10."',
     'testimonials.t3.role': 'Propietaria – Centro deportivo',
 
-    'sat.placeholder': 'Número de tu máquina',
+    'sat.whatsappTitle': 'Envíanos un WhatsApp',
 
     'contact.tag': 'Contacta con nosotros',
     'contact.title': 'Hablemos sin compromiso',
