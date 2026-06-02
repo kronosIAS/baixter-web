@@ -31,6 +31,7 @@
   --text:        #FFFFFF;
   --text-muted:  #A0AEC0;
   --text-dim:    #6B7280;
+  --display-text: #cfe0f5;
 
   /* — Compatibility aliases (kept so every legacy selector resolves) — */
   --accent:      var(--amber);
@@ -1626,10 +1627,10 @@ a { text-decoration: none; color: inherit; }
   box-shadow: inset 0 0 16px rgba(0,0,0,.6);
   padding: 10px; min-height: 52px;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
-  transition: box-shadow .3s, border-color .3s;
+  transition: box-shadow var(--transition), border-color var(--transition);
 }
 .display-eyebrow { font-family: var(--font-data); font-weight: 700; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--amber); }
-.display-main { font-family: var(--font-display); font-weight: 800; font-size: .95rem; color: #cfe0f5; text-align: center; }
+.display-main { font-family: var(--font-display); font-weight: 800; font-size: .95rem; color: var(--display-text); text-align: center; }
 
 .keypad { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
 .vbtn {
@@ -1639,7 +1640,7 @@ a { text-decoration: none; color: inherit; }
   cursor: pointer; transition: var(--transition);
   font-family: var(--font-data); text-align: left;
 }
-.vbtn-code { font-weight: 700; font-size: .6rem; color: var(--text-dim); background: #0c0c0c; border: 1px solid #2d2d2d; border-radius: 2px; padding: 2px 4px; flex-shrink: 0; }
+.vbtn-code { font-weight: 700; font-size: .6rem; color: var(--text-dim); background: var(--bg-deep); border: 1px solid var(--border); border-radius: 2px; padding: 2px 4px; flex-shrink: 0; }
 .vbtn-label { font-weight: 700; font-size: .74rem; color: var(--text-muted); line-height: 1.1; }
 .vbtn:hover, .vbtn:focus-visible {
   background: var(--surface-3); border-color: var(--amber); outline: none;
