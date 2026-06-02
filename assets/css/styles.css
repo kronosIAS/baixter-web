@@ -1704,3 +1704,30 @@ a { text-decoration: none; color: inherit; }
 .back-btn:focus-visible { outline: 2px solid var(--amber-light); outline-offset: 2px; }
 .panel-content { max-width: 1180px; margin: 0 auto; padding: 70px 24px; outline: none; }
 .panel-footer { margin-top: 0; }
+
+/* ═══════════ ANIMACIÓ DE DISPENSAT ═══════════ */
+.display.is-dispensing { box-shadow: 0 0 20px rgba(242,169,0,.6); border-color: var(--amber); }
+.display.is-dispensing .display-main { color: var(--amber-light); }
+
+.capsule.drop { animation: capsuleDrop .6s cubic-bezier(.5,0,.6,1) forwards; }
+@keyframes capsuleDrop {
+  0%   { opacity: 1; top: -40px; transform: translateX(-50%) rotate(0); }
+  100% { opacity: 1; top: 12px;  transform: translateX(-50%) rotate(8deg); }
+}
+.tray.flash { animation: trayFlash .4s ease; }
+@keyframes trayFlash {
+  0%,100% { box-shadow: inset 0 8px 16px rgba(0,0,0,.85); }
+  50%     { box-shadow: inset 0 0 18px rgba(242,169,0,.7), 0 0 16px rgba(242,169,0,.4); }
+}
+
+.panel.is-entering { animation: panelRise .55s cubic-bezier(.2,.7,.2,1); transform-origin: bottom center; }
+@keyframes panelRise {
+  0%   { opacity: 0; transform: translateY(60%) scale(.85); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .capsule.drop, .tray.flash { animation: none; }
+  .panel.is-entering { animation: panelFade .25s ease; }
+  @keyframes panelFade { from { opacity: 0; } to { opacity: 1; } }
+}
